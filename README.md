@@ -40,14 +40,18 @@ Moyennement difficile,Bon marché,
 ```
 Ce second exemple de recette est issu quand à lui de *test.csv*. Cet ensemble de recettes permettra de *valider* nos résultats une fois les classifieurs entraînés. On remarque que format de cet ensemble est le mème que pour l'ensemble précédent. 
 
-
 ## Statistiques corpus
  
 ### Le corpus, globalement
 
 Le set contient *13861* recettes dont *9981* sont utilisées pour le train, *2495* pour le test et *1388* pour la validation. 
 Afin d'analyser le contenu de ces recettes, nous avons **concaténé** le titre, la recette et les ingrédients. 
-	
+
+### Distribution des types de recettes
+
+Dans le set d'entrainement, on peut compter $5802$ Plats principaux $3762$ Desserts et $2909$ Entrées. Respectivements ils représentent $46,52\%$, $30,16\%$ et $23,32\%$ des effectifs totaux de l'ensemble d'entraînement. On remarque alors tout de suite que les *Plats principaux* sont surreprésentés, tandis que les *Entrées* sont sous représentées. Dans ce type de cironstances, on remarque assez vite que le risque pour le modèle est de répondre trop souvent *Plat principal* dans le but d'améliorer l'accuracy globale, au détriment du tax de vrai positifs pour les Entrées. 
+
+Le set de validation quant à lui compte 644 407 2909
 
 ## Méthodes proposées
 
