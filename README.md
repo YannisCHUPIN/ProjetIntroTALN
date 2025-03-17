@@ -125,7 +125,7 @@ On remarque que SVC et Regression logistique se démarquent. La comparaison de l
 
 Nous constatons de meilleurs résultats en régression logistique dans les matrices de confusion. C'est notamment le cas pour l'entrée.
 
-Voilà pourquoi nous choisissons Régression logistique comme classifieur.
+Voilà pourquoi nous choisissons **Régression logistique** comme classifieur.
 
 | Run       | f1-score |
 | --------- | --------:|
@@ -151,9 +151,60 @@ Voilà pourquoi nous choisissons Régression logistique comme classifieur.
 
 
 ### Analyse de résultats
-	
+
+#### Analyse comparative des différents modèles et approches 
+
+##### Logistic Regression
+Très efficace pour les problèmes de classification textuelle car les frontières de décision sont relativement linéaire, particulièrement adapté aux données à haute dimension comme TF-IDF.
+La régression logistique excelle sur ce problème car les catégories de recettes sont souvent séparables linéairement dans l'espace vectoriel TF-IDF. Les courbes ROC montrent une excellente capacité de discrimination, particulièrement pour les desserts (AUC=1.0), confirmant que les frontières de décision linéaires sont adaptées.
+##### SVM
+Le SVM performe presque aussi bien que la régression logistique, confirmant l'hypothèse que les classes sont relativement bien séparables dans l'espace des features. Sa légère infériorité pourrait s'expliquer par une sensibilité différente au déséquilibre des classes.
+##### Random Forest
+La performance légèrement inférieure des Random Forests suggère que les avantages des méthodes ensemblistes ne compensent pas leur difficulté à naviguer dans l'espace de grande dimension créé par TF-IDF. Les relations entre les mots-clés et les catégories sont suffisamment directes pour être capturées par des modèles plus simples.
+##### Naive Bayes
+Naive Bayes montre la performance la plus faible, probablement en raison de son hypothèse d'indépendance des features qui n'est pas respectée dans les textes de recettes. Les termes culinaires co-occurrent fréquemment (ex: "pâte" et "four" pour les desserts), ce qui pénalise ce modèle.
+##### TF-IDF
+La supériorité de TF-IDF s'explique par la nature très spécifique du vocabulaire culinaire. Les catégories de recettes se distinguent fortement par leurs ingrédients et techniques spécifiques, et TF-IDF excelle à capturer ces différences lexicales. Par exemple, les desserts contiennent presque systématiquement des termes comme "sucre", "chocolat" ou "pâte", tandis que les entrées mentionnent souvent "salade" ou "apéritif".
+##### CamemBERT
+CamemBERT offre une bonne performance car il comprend le contexte linguistique des recettes françaises. Cependant, sa sophistication est peut-être superflue pour cette tâche où la simple présence de certains mots-clés est suffisamment discriminante, ce qui explique pourquoi il est légèrement moins performant que TF-IDF.
+##### Word2Vec
+Word2Vec est moins adapté car il tend à lisser les différences entre les termes en se concentrant sur les similarités sémantiques, alors que pour cette tâche, ce sont précisément les différences lexicales qui sont les plus informatives.
+
+
+#### Analyse du ROC
+
+![ROC](./figure/ROC.png "ROC")
+
+À l'aide de ce graphique, nous remarquons que la surface sous les courbe est $>0.5$ pour toutes les classes. Cela indique que une excellente classification des documents, on prédit mieux qu'un modèle aléatoire. On remarque cependant une grande difficulté pour les entrées et les plats dont les courbes s'emèlent, avec une tendance plus haute pour les plats principaux. Cela indique une hésitation du modèle entre ces deux classes. 
+
+#### Analyse du nombre de documents par prédit
+
+
+![Entrée](./figure/entree_distrib.png "Entrée")
+
+![Plat](./figure/plat_distrib.png "Plat")
+
+![Dessert](./figure/dessert_distrib.png "Dessert")
+
+On remarque ici que le modèle apparit presque certain lorsqu'il fait son choix de classe pour un Dessert. Cela se remarque à cause de l'importance des pics aux extrêma et à l'abscence de documents au centre. 
+
+Au contraire le modèle est bien moins certain pour les plats principaux et les entrées qui ont une plus grande population aux alentours de 0.5. 
+
+Il est à noter le grand 
+
+#### Analyse des matrices de confusion :
+
+Quelque soit l'approche choisie, on remarque une très bonne classification des desserts. Cepenant, les classificateurs dans le but d'obtenir une meilleure accuracy, semblent prédire plus souvent plat principal que entrée. Cela est dû au grand nombre de 
+
+
+
+
+
 	Pistes d'analyse:
 	* Combien de documents ont un score de 0 ? de 0.5 ? de 1 ? (Courbe ROC)
 	* Y-a-t-il des régularités dans les document bien/mal classifiés ?
 	* Où est-ce que l'approche se trompe ? (matrice de confusion)
+
+
+
 	* Si votre méthode le permet: quels sont les descripteurs les plus décisifs ?
