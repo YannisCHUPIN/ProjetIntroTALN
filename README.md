@@ -1,4 +1,4 @@
-# DEFT2013 Tâche 2 : NOMEQUIPE (optionnel)
+# DEFT2013 Tâche 2 :
 
 Bourdere Andreou Nathan - Chupin Yannis
 
@@ -8,8 +8,9 @@ Bourdere Andreou Nathan - Chupin Yannis
 
 ## Statistiques corpus
 
-	Nombre de document de train/dev/test
-	Répartition des étiquettes dans chacun des sous-ensemble
+	Le set contient *13861* recettes dont *9981* sont utilisées pour le train, *2495* pour le test et *1388* pour la validation. 
+	Afin d'analyser le contenu de ces recettes, nous avons **concaténé** le titre, la recette et les ingrédients. 
+	au total on compte X entrées, X plats et X deserts 
 
 ## Méthodes proposées
 
