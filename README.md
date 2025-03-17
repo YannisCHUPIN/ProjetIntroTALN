@@ -51,7 +51,7 @@ Afin d'analyser le contenu de ces recettes, nous avons **concaténé** le titre,
 
 Dans le set d'entrainement, on peut compter $5802$ Plats principaux $3762$ Desserts et $2909$ Entrées. Respectivements ils représentent $46,52\%$, $30,16\%$ et $23,32\%$ des effectifs totaux de l'ensemble d'entraînement. On remarque alors tout de suite que les *Plats principaux* sont surreprésentés, tandis que les *Entrées* sont sous représentées. Dans ce type de cironstances, on remarque assez vite que le risque pour le modèle est de répondre trop souvent *Plat principal* dans le but d'améliorer l'accuracy globale, au détriment du tax de vrai positifs pour les Entrées. 
 
-Le set de validation quant à lui compte 644 407 2909
+Le set de validation quant à lui compte 644 Plats principaux, 407 Desserts et  2909 Entrées. Respectivements ils représentent $46,52\%$, $30,16\%$ et $23,32\%$ des effectifs totaux de l'ensemble de test.
 
 ## Méthodes proposées
 
