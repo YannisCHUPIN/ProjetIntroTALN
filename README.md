@@ -51,17 +51,27 @@ Afin d'analyser le contenu de ces recettes, nous avons **concaténé** le titre,
 
 Dans le set d'entrainement, on peut compter $5802$ Plats principaux $3762$ Desserts et $2909$ Entrées. Respectivements ils représentent $46,52\%$, $30,16\%$ et $23,32\%$ des effectifs totaux de l'ensemble d'entraînement. On remarque alors tout de suite que les *Plats principaux* sont surreprésentés, tandis que les *Entrées* sont sous représentées. Dans ce type de cironstances, on remarque assez vite que le risque pour le modèle est de répondre trop souvent *Plat principal* dans le but d'améliorer l'accuracy globale, au détriment du tax de vrai positifs pour les Entrées. 
 
-Le set de validation quant à lui compte 644 Plats principaux, 407 Desserts et  2909 Entrées. Respectivements ils représentent $46,52\%$, $30,16\%$ et $23,32\%$ des effectifs totaux de l'ensemble de test.
+Le set de validation quant à lui compte 644 Plats principaux, 407 Desserts et  2909 Entrées. Respectivements ils représentent $16,26\%$, $10,27\%$ et $73,45\%$ des effectifs totaux de l'ensemble de test. On remarque une encore plus grande surreprésentation de Entrées cette fois-ci. 
 
 ## Méthodes proposées
 
-### Run1: baseline (méthode de référence)
+En ce qui concerne les méthodes utilisées, nous avons testé à la fois plusieurs *classifieurs* mais aussi plusieurs utilisations des données à notre disposition. 
+
+### Run1: Méthode Aléatoire, notre base
 
 	Description de la méthode:
-	- descripteurs utilisés
-	- classifieur utilisé
+	- Aucun descripteur utilisé.
+	- Associer à une recette un label aléatoire, de manière équiprobable. 
 
-### Run2: NOMMETHODE
+Toutes les méthodes qui suivent, ont été testées avec les classifieurs suivant : 
+ - SVC
+ - Naïve Bayes
+ - Rondom Forest
+ - Logistical regression
+
+
+### Run2: TF-IDF
+	Description des données 
 ### Run3: NOMMETHODE
 ### Run4: NOMMETHODE (pour aller plus loin)
 
