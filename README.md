@@ -64,30 +64,36 @@ En ce qui concerne les méthodes utilisées, nous avons testé à la fois plusie
 	- Associer à une recette un label aléatoire, de manière équiprobable. 
 
 Toutes les méthodes qui suivent, ont été testées avec les classifieurs suivant : 
- - SVC
- - Naïve Bayes
- - Rondom Forest
- - Logistical regression
+ - **SVC**
+ - **Gaussian NB**
+ - **Rondom Forest**
+ - **Logistical regression**
 
-### Run2: BERT
-	Description de la méthode
-### Run4: NOMMETHODE (pour aller plus loin)
-### Run4: TF-IDF
-
+### Run2:TF-IDF
 	Description de la méthode :
 	- Le titre, les ingrédients et la recette ont été concaténés et transformés en vecteurs selon la méthode TF-IDF
+	- Les 4 classifieurs sus-mentionés sont testés
+  
+### Run3: Word2vec
+	Description de la méthode :
+	- Le titre, les ingrédients et la recette ont été concaténés et vectorisés à l'aide du modèle d'embedings word2vec.
+	- Les 4 classifieurs sus-mentionés sont testés
+  
+### Run4: Camembert
+	Description de la méthode :
+	- Le titre, les ingrédients et la recette ont été concaténés et vectorisés à l'aide du modèle d'embedings Camebmebert qui est un modèle BERT fien-tuné pour le français.
 	- Les 4 classifieurs sus-mentionés sont testés
 
 ## Résultats
 
 ### Les f1 Scores
 
-| Run      |    SVC   |Naive Bayes| Rand. Forest | Reg. Log. |
-| -------- | --------:| --------:| --------:| --------:|
-| baseline |     15,2 | | | |
-| METH 2   |      6,8 | | | |
-| METH 3   |     50,8 | | | |
-| METH 4   |     70,2 | | | |
+| Run       |    SVC   |Gaussian Nb| Rand. Forest | Reg. Log. |
+| --------- | --------:| ---------:| ------------:| ---------:|
+| baseline  |     15,2 |           |              |           |
+| TF-IDF    | **0.86** |      0.59 |         0.77 |  **0.86** |
+| Word2vec  |     0.83 |      0.79 |         0.80 |     ?0.85 |
+| Camembert |     0.85 |      0.79 |         0.79 |     ?0.84 |
 
 ### Les matrices de confusions
 
