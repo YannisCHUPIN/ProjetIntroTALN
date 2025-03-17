@@ -1,0 +1,227 @@
+<!DOCTYPE html><html><head>
+      <title>README</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\Yannis\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.18\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="deft2013-tâche-2-">DEFT2013 Tâche 2 : </h1>
+<p><em>Bourdere Andreou Nathan - Chupin Yannis</em></p>
+<p>Retrouvez le notebook au coeur de notre projet sur ce <a href="https://colab.research.google.com/drive/1MnukWfxglrTBuqy65Yd3l0IRLzC3CvEb#scrollTo=lfnRacezr8cU">lien</a>.</p>
+<h2 id="description-de-la-tâche">Description de la tâche </h2>
+<p>Les documents ont été fournis dans deux CSVs. Une ligne désignait un document et pour chaque nous disposons des informations suivantes :</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>doc_id,titre,type,difficulte,cout,ingredients,recette
+</code></pre><p>Prennons l'exemple du premier document situé dans le <em>train.csv</em>:</p>
+<pre data-role="codeBlock" data-info="SQL" class="language-sql SQL"><code>recette_221358<span class="token punctuation">.</span>xml<span class="token punctuation">,</span>
+<span class="token string">"Feuilleté de saumon et de poireau, sauce aux crevettes"</span><span class="token punctuation">,</span>
+Plat principal<span class="token punctuation">,</span>
+Facile<span class="token punctuation">,</span>
+Moyen<span class="token punctuation">,</span>
+<span class="token string">"- 1 gros pavé de saumon - 100 g de crevettes décortiquées - 2 poireaux moyens - 1 oignon  - 1 pâte feuilletée - 25 cl de crème liquide épaisse - Un peu de vin blanc - 1/2 citron jaune - 1 jaune d'oeuf - Un peu d'huile d'olive  - Une noisette de beurre - Sel, aneth"</span><span class="token punctuation">,</span>
+<span class="token string">"Couper finement le blanc et un peu de vert des poireaux en rondelle. Éplucher et couper l'oignon. Faire chauffer l'huile d'olive et le beurre dans une poêle. Y faire revenir à feu doux les poireaux et l'oignon environ 15 minutes. En fin de cuisson ajouter le vin blanc, un peu d'aneth et du sel. Pendant ce temps faire cuire le saumon dans une poêle huilée. En fin de cuisson le faire griller sur feu vif. Préparer la sauce : mélanger les crevettes, le 1/2 citron jaune, la crème, le sel et l'aneth. Ajouter un peu de sauce à la préparation des poireaux. Préchauffer le four à 200°C (thermostat 6-7.Étaler la pâte feuilletée et la couper en 2. Sur une moitié disposer la préparation au poireaux. Disposer le saumon sur les poireaux. Y verser un peu de sauce sur le dessus (garder le reste de sauce au frigo). Refermer le chausson à l'aide de l'autre moitié de la pâte feuilleté. Bien appuyer sur les bords. Étaler le jaune d’œuf sur le dessus à l'aide d'un pinceau. Enfourner environ 20 minutes. Avant de servir chauffer la sauce et la servir à côté du feuilleté.On peut servir ce feuilleté avec une salade verte."</span>
+</code></pre><p>On remarque que le <em>doc_id</em> nous permet déjà d'identifier le document (la recette) de manière unique. Ensuite, notre objectif est de classifier des recettes de manière à savoir si c'est <strong>une entrée</strong>, un <strong>plat principal</strong> ou <strong>un dessert</strong>. Le <em>type</em> est donc l'information cruciale, l'attribut <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span>, que nous devons séparer du reste des attributs pour l'entrainement.</p>
+<p>Pour ce qui est du classifieur, les informations pertinentes à son entraînement se trouvent dans <strong>titre</strong>, <strong>ingrédient</strong> et <strong>recette</strong>. Ces informations peuvent être mise en valeur par l'usage d'outils TAL, d'où l'interêt particulier que nous leur portons pour ce projet.</p>
+<p>Cencernant le reste des attributs (<em>coût</em> et <em>difficulté</em>) nous n'y avons accodré que peu d'importance car ce que nous souhaitions avant tout c'était de perfectionner notre maîtrise des outils TAL. Notons cependant qu'il serait intéressant de les encoder via des one-hot afin de regarder si leur incormoration au modèle le fait gagner en performances.</p>
+<pre data-role="codeBlock" data-info="SQL" class="language-sql SQL"><code>recette_84191<span class="token punctuation">.</span>xml<span class="token punctuation">,</span>
+Roulé à la confiture de lait<span class="token punctuation">,</span>
+Dessert<span class="token punctuation">,</span>
+Moyennement difficile<span class="token punctuation">,</span>Bon marché<span class="token punctuation">,</span>
+<span class="token string">"- Pour la garniture: - 1 boîte de lait concentré sucré de 40 cl - 250 g de mascarpone - Pour le biscuit: - 4 oeufs - 50 g de farine - 50 g de fleur de maïs - 125 g de sucre"</span><span class="token punctuation">,</span>
+<span class="token string">"La veille, préparer de la confiture de lait en portant à ébullition au bain marie pendant 3 heures le lait concentré sucré. Mélanger énergiquement les 4 jaunes d'oeufs avec le sucre, la farine, la fécule. Monter les blancs en neige et les incorporer à la préparation précédente. Répandre le tout sur une plaque de cuisson(penser au démoulage facile : silicone, papier cuisson...)et faire cuire juste 15 minutes à 180°C (thermostat 6). A la sortie du four, le rouler sur lui-même dans un linge humide. Mélanger la confiture de lait avec le mascarpone jusqu'à l'obtention d'une pâte lisse. Étaler la crème obtenue sur le biscuit en veillant à ne pas aller jusqu'aux bords puis le rouler à nouveau. Mettre au moins 1 heure au réfrigérateur. Attention aux divers temps de repos/préparation ! Chocolat chaud"</span>
+</code></pre><p>Ce second exemple de recette est issu quand à lui de <em>test.csv</em>. Cet ensemble de recettes permettra de <em>valider</em> nos résultats une fois les classifieurs entraînés. On remarque que format de cet ensemble est le mème que pour l'ensemble précédent.</p>
+<h2 id="statistiques-corpus">Statistiques corpus </h2>
+<h3 id="le-corpus-globalement">Le corpus, globalement </h3>
+<p>Le set contient <em>13861</em> recettes dont <em>9981</em> sont utilisées pour le train, <em>2495</em> pour la validation et <em>1388</em> pour le test.<br>
+Afin d'analyser le contenu de ces recettes, nous avons <strong>concaténé</strong> le titre, la recette et les ingrédients.</p>
+<h3 id="distribution-des-types-de-recettes">Distribution des types de recettes </h3>
+<p>Dans le set d'entrainement, on peut compter <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5802</mn></mrow><annotation encoding="application/x-tex">5802</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">5802</span></span></span></span> Plats principaux <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3762</mn></mrow><annotation encoding="application/x-tex">3762</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">3762</span></span></span></span> Desserts et <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2909</mn></mrow><annotation encoding="application/x-tex">2909</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2909</span></span></span></span> Entrées. Respectivements ils représentent <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>46</mn><mo separator="true">,</mo><mn>52</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">46,52\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9444em;vertical-align:-0.1944em;"></span><span class="mord">46</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">52%</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>30</mn><mo separator="true">,</mo><mn>16</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">30,16\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9444em;vertical-align:-0.1944em;"></span><span class="mord">30</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">16%</span></span></span></span> et <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>23</mn><mo separator="true">,</mo><mn>32</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">23,32\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9444em;vertical-align:-0.1944em;"></span><span class="mord">23</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">32%</span></span></span></span> des effectifs totaux de l'ensemble d'entraînement. On remarque alors tout de suite que les <em>Plats principaux</em> sont surreprésentés, tandis que les <em>Entrées</em> sont sous représentées. Dans ce type de cironstances, on remarque assez vite que le risque pour le modèle est de répondre trop souvent <em>Plat principal</em> dans le but d'améliorer l'accuracy globale, au détriment du tax de vrai positifs pour les Entrées.</p>
+<p>Le set de test quant à lui compte 644 Plats principaux, 407 Desserts et  2909 Entrées. Respectivements ils représentent <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>16</mn><mo separator="true">,</mo><mn>26</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">16,26\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9444em;vertical-align:-0.1944em;"></span><span class="mord">16</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">26%</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mo separator="true">,</mo><mn>27</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">10,27\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9444em;vertical-align:-0.1944em;"></span><span class="mord">10</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">27%</span></span></span></span> et <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>73</mn><mo separator="true">,</mo><mn>45</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">73,45\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9444em;vertical-align:-0.1944em;"></span><span class="mord">73</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">45%</span></span></span></span> des effectifs totaux de l'ensemble de test. On remarque une encore plus grande surreprésentation de Entrées cette fois-ci.</p>
+<h2 id="méthodes-proposées">Méthodes proposées </h2>
+<p>En ce qui concerne les méthodes utilisées, nous avons testé à la fois plusieurs <em>classifieurs</em> mais aussi plusieurs utilisations des données à notre disposition.</p>
+<h3 id="run1-méthode-aléatoire-notre-base">Run1: Méthode Aléatoire, notre base </h3>
+<pre class="language-text">Description de la méthode:
+- Aucun descripteur utilisé.
+- Associer à une recette un label aléatoire, de manière équiprobable. 
+</pre>
+<p>Toutes les méthodes qui suivent, ont été testées avec les classifieurs suivant :</p>
+<ul>
+<li><strong>SVC</strong></li>
+<li><strong>Gaussian NB</strong></li>
+<li><strong>Rondom Forest</strong></li>
+<li><strong>Logistical regression</strong></li>
+</ul>
+<h3 id="run2tf-idf">Run2:TF-IDF </h3>
+<pre class="language-text">Description de la méthode :
+- Le titre, les ingrédients et la recette ont été concaténés et transformés en vecteurs selon la méthode TF-IDF
+- Les 4 classifieurs sus-mentionés sont testés
+</pre>
+<h3 id="run3-word2vec">Run3: Word2vec </h3>
+<pre class="language-text">Description de la méthode :
+- Le titre, les ingrédients et la recette ont été concaténés et vectorisés à l'aide du modèle d'embedings word2vec.
+- Les 4 classifieurs sus-mentionés sont testés
+</pre>
+<h3 id="run4-camembert">Run4: Camembert </h3>
+<pre class="language-text">Description de la méthode :
+- Le titre, les ingrédients et la recette ont été concaténés et vectorisés à l'aide du modèle d'embedings Camebmebert qui est un modèle BERT fien-tuné pour le français.
+- Les 4 classifieurs sus-mentionés sont testés
+</pre>
+<h2 id="résultats">Résultats </h2>
+<h3 id="les-f1-scores-en-validation">Les f1 Scores en Validation </h3>
+<p>f1-score pour la <strong>baseline</strong> : 0.33</p>
+<table>
+<thead>
+<tr>
+<th>Run</th>
+<th style="text-align:right">SVC</th>
+<th style="text-align:right">Gaussian Nb</th>
+<th style="text-align:right">Rand. Forest</th>
+<th style="text-align:right">Reg. Log.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>baseline</td>
+<td style="text-align:right">/</td>
+<td style="text-align:right">/</td>
+<td style="text-align:right">/</td>
+<td style="text-align:right">/</td>
+</tr>
+<tr>
+<td>TF-IDF</td>
+<td style="text-align:right"><strong>0.86</strong></td>
+<td style="text-align:right">0.59</td>
+<td style="text-align:right">0.77</td>
+<td style="text-align:right"><strong>0.86</strong></td>
+</tr>
+<tr>
+<td>Word2vec</td>
+<td style="text-align:right">0.83</td>
+<td style="text-align:right">0.79</td>
+<td style="text-align:right">0.80</td>
+<td style="text-align:right">0.83</td>
+</tr>
+<tr>
+<td>Camembert</td>
+<td style="text-align:right">0.85</td>
+<td style="text-align:right">0.79</td>
+<td style="text-align:right">0.79</td>
+<td style="text-align:right">0.84</td>
+</tr>
+</tbody>
+</table>
+<p>On remarque que SVC et Regression logistique se démarquent. La comparaison de leur matrice de confusion décidera de leur score.</p>
+<h3 id="matrices-de-confusion-pour-la-validation">matrices de Confusion pour la Validation </h3>
+<h4 id="svc">SVC </h4>
+<p><img src="./figure/newplot_12.png" alt="TF-IDF" title="TF-IDF"><br>
+<em>TF-IDF</em></p>
+<p><img src="./figure/newplot_5.png" alt="Word2Vec" title="Word2Vec"><br>
+<em>Word2Vec</em></p>
+<p><img src="./figure/newplot.png" alt="Camembert" title="Camembert"></p>
+<h4 id="régression-logistique">Régression Logistique </h4>
+<p><img src="./figure/newplot_9.png" alt="TF-IDF" title="TF-IDF"><br>
+<em>TF-IDF</em></p>
+<p><img src="./figure/newplot_8.png" alt="Word2Vec" title="Word2Vec"><br>
+<em>Word2Vec</em></p>
+<p><img src="./figure/newplot_4.png" alt="Camembert" title="Camembert"></p>
+<h3 id="les-f1-scores-test">Les f1 Scores test </h3>
+<p>Nous constatons de meilleurs résultats en régression logistique dans les matrices de confusion. C'est notamment le cas pour l'entrée.</p>
+<p>Voilà pourquoi nous choisissons <strong>Régression logistique</strong> comme classifieur.</p>
+<table>
+<thead>
+<tr>
+<th>Run</th>
+<th style="text-align:right">f1-score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>baseline</td>
+<td style="text-align:right">/</td>
+</tr>
+<tr>
+<td>TF-IDF</td>
+<td style="text-align:right"><strong>0.87</strong></td>
+</tr>
+<tr>
+<td>Word2vec</td>
+<td style="text-align:right">0.85</td>
+</tr>
+<tr>
+<td>Camembert</td>
+<td style="text-align:right">0.84</td>
+</tr>
+</tbody>
+</table>
+<h3 id="les-matrices-de-confusions-de-test-pour-régression-logistique">Les matrices de confusions de test pour Régression Logistique. </h3>
+<h4 id="tf-idf">TF-IDF </h4>
+<p><img src="./figure/rl_tf_test.png" alt="Régression Logistique" title="Régression Logistique"></p>
+<h4 id="word-2-vec">Word 2 Vec </h4>
+<p><img src="./figure/rl_w2v_test.png" alt="Régression Logistique" title="Régression Logistique"></p>
+<h4 id="camembert">Camembert </h4>
+<p><img src="./figure/rl_bert_test.png" alt="Régression Logistique" title="Régression Logistique"></p>
+<h3 id="analyse-de-résultats">Analyse de résultats </h3>
+<h4 id="analyse-comparative-des-différents-modèles-et-approches">Analyse comparative des différents modèles et approches </h4>
+<h5 id="logistic-regression">Logistic Regression </h5>
+<p>Très efficace pour les problèmes de classification textuelle car les frontières de décision sont relativement linéaire, particulièrement adapté aux données à haute dimension comme TF-IDF.<br>
+La régression logistique excelle sur ce problème car les catégories de recettes sont souvent séparables linéairement dans l'espace vectoriel TF-IDF. Les courbes ROC montrent une excellente capacité de discrimination, particulièrement pour les desserts (AUC=1.0), confirmant que les frontières de décision linéaires sont adaptées.</p>
+<h5 id="svm">SVM </h5>
+<p>Le SVM performe presque aussi bien que la régression logistique, confirmant l'hypothèse que les classes sont relativement bien séparables dans l'espace des features. Sa légère infériorité pourrait s'expliquer par une sensibilité différente au déséquilibre des classes.</p>
+<h5 id="random-forest">Random Forest </h5>
+<p>La performance légèrement inférieure des Random Forests suggère que les avantages des méthodes ensemblistes ne compensent pas leur difficulté à naviguer dans l'espace de grande dimension créé par TF-IDF. Les relations entre les mots-clés et les catégories sont suffisamment directes pour être capturées par des modèles plus simples.</p>
+<h5 id="naive-bayes">Naive Bayes </h5>
+<p>Naive Bayes montre la performance la plus faible, probablement en raison de son hypothèse d'indépendance des features qui n'est pas respectée dans les textes de recettes. Les termes culinaires co-occurrent fréquemment (ex: "pâte" et "four" pour les desserts), ce qui pénalise ce modèle.</p>
+<h5 id="tf-idf-1">TF-IDF </h5>
+<p>La supériorité de TF-IDF s'explique par la nature très spécifique du vocabulaire culinaire. Les catégories de recettes se distinguent fortement par leurs ingrédients et techniques spécifiques, et TF-IDF excelle à capturer ces différences lexicales. Par exemple, les desserts contiennent presque systématiquement des termes comme "sucre", "chocolat" ou "pâte", tandis que les entrées mentionnent souvent "salade" ou "apéritif".</p>
+<h5 id="camembert-1">CamemBERT </h5>
+<p>CamemBERT offre une bonne performance car il comprend le contexte linguistique des recettes françaises. Cependant, sa sophistication est peut-être superflue pour cette tâche où la simple présence de certains mots-clés est suffisamment discriminante, ce qui explique pourquoi il est légèrement moins performant que TF-IDF.</p>
+<h5 id="word2vec">Word2Vec </h5>
+<p>Word2Vec est moins adapté car il tend à lisser les différences entre les termes en se concentrant sur les similarités sémantiques, alors que pour cette tâche, ce sont précisément les différences lexicales qui sont les plus informatives.</p>
+<h4 id="analyse-du-roc">Analyse du ROC </h4>
+<p><img src="./figure/ROC.png" alt="ROC" title="ROC"></p>
+<p>À l'aide de ce graphique, nous remarquons que la surface sous les courbe est <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&gt;</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">&gt;0.5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.5</span></span></span></span> pour toutes les classes. Cela indique que une excellente classification des documents, on prédit mieux qu'un modèle aléatoire. On remarque cependant une grande difficulté pour les entrées et les plats dont les courbes s'emèlent, avec une tendance plus haute pour les plats principaux. Cela indique une hésitation du modèle entre ces deux classes.</p>
+<h4 id="analyse-du-nombre-de-documents-par-prédit">Analyse du nombre de documents par prédit </h4>
+<p><img src="./figure/entree_distrib.png" alt="Entrée" title="Entrée"></p>
+<p><img src="./figure/plat_distrib.png" alt="Plat" title="Plat"></p>
+<p><img src="./figure/dessert_distrib.png" alt="Dessert" title="Dessert"></p>
+<p>On remarque ici que le modèle apparit presque certain lorsqu'il fait son choix de classe pour un Dessert. Cela se remarque à cause de l'importance des pics aux extrêma et à l'abscence de documents au centre.</p>
+<p>Au contraire le modèle est bien moins certain pour les plats principaux et les entrées qui ont une plus grande population aux alentours de 0.5.</p>
+<p>Il est à noter, le grand pic vers 0 et l'abscence de pic vers 1 pour les entrées. cela indique que le modèle semble certain de ce qui n'est pas une entrée mais n'est jamais certain qu'une recette désigne une entrée.</p>
+<h4 id="analyse-des-matrices-de-confusion-">Analyse des matrices de confusion : </h4>
+<p><img src="./figure/rl_tf_test.png" alt="Régression Logistique" title="Régression Logistique"></p>
+<p>Quelque soit l'approche choisie, on remarque une très bonne classification des desserts. Cepenant, les classificateurs dans le but d'obtenir une meilleure accuracy, semblent prédire plus souvent plat principal que entrée. Cela peut s'expliquer par la topologie du set dans lequel on trouve <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>47</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">47\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8056em;vertical-align:-0.0556em;"></span><span class="mord">47%</span></span></span></span> de plats pour <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>23</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">23\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8056em;vertical-align:-0.0556em;"></span><span class="mord">23%</span></span></span></span> d'entrées. Alors même que ce type de considération n'a pas d'importance lorsqu'on confronte le modèle au monde réel. En effet la topologie du set de test est diamétralement opposée avec plus de <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>70</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">70\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8056em;vertical-align:-0.0556em;"></span><span class="mord">70%</span></span></span></span> d'entrées, ce qui prouve que prédire plus souvent "plat principal" n'est pas une solution viable.</p>
+<h2 id="conclusion">Conclusion </h2>
+<p>Pour conclure, la meilleure approche globale est la vectorisation des textes avec TF-IDF et l'utilisation du modèle de Régression Logistique, soulignant ainsi que les textes sont assez linéairement séparables car on obtient un F1-score de 0.86, ce qui est excellent. De même, les termes discriminants sont un signal fort que les relations semantiques capturées par les embeddings.<br>
+Les matrices de confusion nous indiquent que le modèle est excellent pour prédire les desserts, mais confonds les plats principal et les entrées entre elles, ce qui est logique car l'un est sur-representé et l'autre est sous-representé dans les jeux de données.<br>
+Enfin, nous avons la certitude grâce à la courbe ROC que le modèle est capable de discriminer efficacement les trois catégories de recettes.</p>
+<p>Pour aller plus loin, nous recommendons donc l'utilisation de techniques de rééquilibrages de classes comme SMOTE ou la pondération (même si sensible à l'overfitting) afin d'améliorer la détection des entrées. Il serit aussi intéressant de réintégrer les attribut <em>prix</em> et <em>difficulté</em> en les encodant en one-hot, pour comprendre l'impact de ces features sur les prédictions des modèles.</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
