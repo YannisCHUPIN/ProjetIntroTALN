@@ -44,14 +44,14 @@ Ce second exemple de recette est issu quand à lui de *test.csv*. Cet ensemble d
  
 ### Le corpus, globalement
 
-Le set contient *13861* recettes dont *9981* sont utilisées pour le train, *2495* pour le test et *1388* pour la validation. 
+Le set contient *13861* recettes dont *9981* sont utilisées pour le train, *2495* pour la validation et *1388* pour le test. 
 Afin d'analyser le contenu de ces recettes, nous avons **concaténé** le titre, la recette et les ingrédients. 
 
 ### Distribution des types de recettes
 
 Dans le set d'entrainement, on peut compter $5802$ Plats principaux $3762$ Desserts et $2909$ Entrées. Respectivements ils représentent $46,52\%$, $30,16\%$ et $23,32\%$ des effectifs totaux de l'ensemble d'entraînement. On remarque alors tout de suite que les *Plats principaux* sont surreprésentés, tandis que les *Entrées* sont sous représentées. Dans ce type de cironstances, on remarque assez vite que le risque pour le modèle est de répondre trop souvent *Plat principal* dans le but d'améliorer l'accuracy globale, au détriment du tax de vrai positifs pour les Entrées. 
 
-Le set de validation quant à lui compte 644 Plats principaux, 407 Desserts et  2909 Entrées. Respectivements ils représentent $16,26\%$, $10,27\%$ et $73,45\%$ des effectifs totaux de l'ensemble de test. On remarque une encore plus grande surreprésentation de Entrées cette fois-ci. 
+Le set de test quant à lui compte 644 Plats principaux, 407 Desserts et  2909 Entrées. Respectivements ils représentent $16,26\%$, $10,27\%$ et $73,45\%$ des effectifs totaux de l'ensemble de test. On remarque une encore plus grande surreprésentation de Entrées cette fois-ci. 
 
 ## Méthodes proposées
 
@@ -69,13 +69,14 @@ Toutes les méthodes qui suivent, ont été testées avec les classifieurs suiva
  - Rondom Forest
  - Logistical regression
 
-
-### Run2: TF-IDF
+### Run2: BERT
+	Description de la méthode
+### Run4: NOMMETHODE (pour aller plus loin)
+### Run4: TF-IDF
 
 	Description de la méthode :
-	- Le titre, les ingrédients et la recette ont été concaténés et les données utilisées sont celles de la 
-### Run3: NOMMETHODE
-### Run4: NOMMETHODE (pour aller plus loin)
+	- Le titre, les ingrédients et la recette ont été concaténés et transformés en vecteurs selon la méthode TF-IDF
+	- Les 4 classifieurs sus-mentionés sont testés
 
 ## Résultats
 
