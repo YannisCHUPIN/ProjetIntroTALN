@@ -71,18 +71,24 @@ Toutes les méthodes qui suivent, ont été testées avec les classifieurs suiva
 
 
 ### Run2: TF-IDF
-	Description des données 
+
+	Description de la méthode :
+	- Le titre, les ingrédients et la recette ont été concaténés et les données utilisées sont celles de la 
 ### Run3: NOMMETHODE
 ### Run4: NOMMETHODE (pour aller plus loin)
 
 ## Résultats
 
-| Run      | f1 Score |
-| -------- | --------:|
-| baseline |  15,2 |
-| METH 2   |   6,8 |
-| METH 3   |  50,8 |
-| METH 4   |  70,2 |
+### Les f1 Scores
+
+| Run      |    SVC   |Naive Bayes| Rand. Forest | Reg. Log. |
+| -------- | --------:| --------:| --------:| --------:|
+| baseline |     15,2 | | | |
+| METH 2   |      6,8 | | | |
+| METH 3   |     50,8 | | | |
+| METH 4   |     70,2 | | | |
+
+### Les matrices de confusions
 
 ### Analyse de résultats
 	
