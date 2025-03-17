@@ -119,7 +119,7 @@ On remarque que SVC et Regression logistique se démarquent. La comparaison de l
 ![Word2Vec](./figure/newplot_8.png "Word2Vec")
 *Word2Vec*
 
-![Camembert](./figure/newplot4.png "Camembert")
+![Camembert](./figure/newplot_4.png "Camembert")
 
 ### Les f1 Scores test
 
@@ -190,21 +190,19 @@ On remarque ici que le modèle apparit presque certain lorsqu'il fait son choix 
 
 Au contraire le modèle est bien moins certain pour les plats principaux et les entrées qui ont une plus grande population aux alentours de 0.5. 
 
-Il est à noter le grand 
+Il est à noter, le grand pic vers 0 et l'abscence de pic vers 1 pour les entrées. cela indique que le modèle semble certain de ce qui n'est pas une entrée mais n'est jamais certain qu'une recette désigne une entrée. 
 
 #### Analyse des matrices de confusion :
 
-Quelque soit l'approche choisie, on remarque une très bonne classification des desserts. Cepenant, les classificateurs dans le but d'obtenir une meilleure accuracy, semblent prédire plus souvent plat principal que entrée. Cela est dû au grand nombre de 
+![Régression Logistique](./figure/rl_tf_test.png "Régression Logistique")
+
+Quelque soit l'approche choisie, on remarque une très bonne classification des desserts. Cepenant, les classificateurs dans le but d'obtenir une meilleure accuracy, semblent prédire plus souvent plat principal que entrée. Cela peut s'expliquer par la topologie du set dans lequel on trouve $47\%$ de plats pour $23\%$ d'entrées. Alors même que ce type de considération n'a pas d'importance lorsqu'on confronte le modèle au monde réel. En effet la topologie du set de test est diamétralement opposée avec plus de $70\%$ d'entrées, ce qui prouve que prédire plus souvent "plat principal" n'est pas une solution viable.
 
 
+## Conclusion 
 
+Pour conclure, la meilleure approche globale est la vectorisation des textes avec TF-IDF et l'utilisation du modèle de Régression Logistique, soulignant ainsi que les textes sont assez linéairement séparables car on obtient un F1-score de 0.86, ce qui est excellent. De même, les termes discriminants sont un signal fort que les relations semantiques capturées par les embeddings.
+Les matrices de confusion nous indiquent que le modèle est excellent pour prédire les desserts, mais confonds les plats principal et les entrées entre elles, ce qui est logique car l'un est sur-representé et l'autre est sous-representé dans les jeux de données.
+Enfin, nous avons la certitude grâce à la courbe ROC que le modèle est capable de discriminer efficacement les trois catégories de recettes.
 
-
-	Pistes d'analyse:
-	* Combien de documents ont un score de 0 ? de 0.5 ? de 1 ? (Courbe ROC)
-	* Y-a-t-il des régularités dans les document bien/mal classifiés ?
-	* Où est-ce que l'approche se trompe ? (matrice de confusion)
-
-
-
-	* Si votre méthode le permet: quels sont les descripteurs les plus décisifs ?
+Pour aller plus loin, nous recommendons donc l'utilisation de techniques de rééquilibrages de classes comme SMOTE ou la pondération (même si sensible à l'overfitting) afin d'améliorer la détection des entrées. Il serit aussi intéressant de réintégrer les attribut *prix* et *difficulté* en les encodant en one-hot, pour comprendre l'impact de ces features sur les prédictions des modèles. 
