@@ -86,16 +86,69 @@ Toutes les méthodes qui suivent, ont été testées avec les classifieurs suiva
 
 ## Résultats
 
-### Les f1 Scores
+### Les f1 Scores en Validation
+
+f1-score pour la **baseline** : 0.33
 
 | Run       |    SVC   |Gaussian Nb| Rand. Forest | Reg. Log. |
 | --------- | --------:| ---------:| ------------:| ---------:|
-| baseline  |     15,2 |           |              |           |
+| baseline  |     /    |      /    |       /      |      /    |
 | TF-IDF    | **0.86** |      0.59 |         0.77 |  **0.86** |
-| Word2vec  |     0.83 |      0.79 |         0.80 |     ?0.85 |
-| Camembert |     0.85 |      0.79 |         0.79 |     ?0.84 |
+| Word2vec  |     0.83 |      0.79 |         0.80 |      0.83 |
+| Camembert |     0.85 |      0.79 |         0.79 |      0.84 |
 
-### Les matrices de confusions
+On remarque que SVC et Regression logistique se démarquent. La comparaison de leur matrice de confusion décidera de leur score.
+
+### matrices de Confusion pour la Validation 
+
+#### SVC
+
+![TF-IDF](./figure/newplot_12.png "TF-IDF")
+*TF-IDF*
+
+![Word2Vec](./figure/newplot_5.png "Word2Vec")
+*Word2Vec*
+
+![Camembert](./figure/newplot.png "Camembert")
+
+#### Régression Logistique
+
+![TF-IDF](./figure/newplot_9.png "TF-IDF")
+*TF-IDF*
+
+![Word2Vec](./figure/newplot_8.png "Word2Vec")
+*Word2Vec*
+
+![Camembert](./figure/newplot4.png "Camembert")
+
+### Les f1 Scores test
+
+Nous constatons de meilleurs résultats en régression logistique dans les matrices de confusion. C'est notamment le cas pour l'entrée.
+
+Voilà pourquoi nous choisissons Régression logistique comme classifieur.
+
+| Run       | f1-score |
+| --------- | --------:|
+| baseline  |     /    |
+| TF-IDF    | **0.87** |
+| Word2vec  |     0.85 |
+| Camembert |     0.84 |
+
+### Les matrices de confusions de test pour Régression Logistique.
+
+
+#### TF-IDF
+
+![Régression Logistique](./figure/rl_tf_test.png "Régression Logistique")
+
+#### Word 2 Vec 
+
+![Régression Logistique](./figure/rl_w2v_test.png "Régression Logistique")
+
+#### Camembert
+
+![Régression Logistique](./figure/rl_bert_test.png "Régression Logistique")
+
 
 ### Analyse de résultats
 	
