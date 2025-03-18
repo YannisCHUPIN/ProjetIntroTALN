@@ -110,6 +110,7 @@ On remarque que SVC et Regression logistique se démarquent. La comparaison de l
 *Word2Vec*
 
 ![Camembert](./figure/newplot.png "Camembert")
+*Camembert*
 
 #### Régression Logistique
 
