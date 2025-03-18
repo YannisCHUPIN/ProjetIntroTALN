@@ -131,8 +131,8 @@ Voilà pourquoi nous choisissons **Régression logistique** comme classifieur.
 | --------- | --------:|
 | baseline  |     /    |
 | TF-IDF    | **0.87** |
-| Word2vec  |     0.85 |
-| Camembert |     0.84 |
+| Word2vec  |     0.84 |
+| Camembert |     0.85 |
 
 ### Les matrices de confusions de test pour Régression Logistique.
 
@@ -155,20 +155,23 @@ Voilà pourquoi nous choisissons **Régression logistique** comme classifieur.
 #### Analyse comparative des différents modèles et approches 
 
 ##### Logistic Regression
-Très efficace pour les problèmes de classification textuelle car les frontières de décision sont relativement linéaire, particulièrement adapté aux données à haute dimension comme TF-IDF.
+Très efficace pour les problèmes de classification textuelle car les frontières de décision sont relativement linéaire, particulièrement adapté aux données clairsemés comme TF-IDF, il peut avoir plus de difficultés avec les données denses,comme les word embeddings, du fait que la logistic régression est un modèle linéaire.
 La régression logistique excelle sur ce problème car les catégories de recettes sont souvent séparables linéairement dans l'espace vectoriel TF-IDF. Les courbes ROC montrent une excellente capacité de discrimination, particulièrement pour les desserts (AUC=1.0), confirmant que les frontières de décision linéaires sont adaptées.
 ##### SVM
 Le SVM performe presque aussi bien que la régression logistique, confirmant l'hypothèse que les classes sont relativement bien séparables dans l'espace des features. Sa légère infériorité pourrait s'expliquer par une sensibilité différente au déséquilibre des classes.
+A noter que nous avons utilisé un SVM avec un kernel linéaire pour toutes les approches, nous aurions peut être du tenter un SVM non-linéaire sur l'approche Word2Vec et Bert, car il aurait sûrement mieux séparer l'espace dense de ces modèles.
 ##### Random Forest
-La performance légèrement inférieure des Random Forests suggère que les avantages des méthodes ensemblistes ne compensent pas leur difficulté à naviguer dans l'espace de grande dimension créé par TF-IDF. Les relations entre les mots-clés et les catégories sont suffisamment directes pour être capturées par des modèles plus simples.
+La performance légèrement inférieure des Random Forests suggère que les avantages des méthodes ensemblistes ne compensent pas leur difficulté à naviguer dans l'espace de grande dimension créé par TF-IDF, cette difficulté est d'autant plus importante avec les approches d'embeddings. Les relations entre les mots-clés et les catégories sont suffisamment directes pour être capturées par des modèles plus simples.
 ##### Naive Bayes
-Naive Bayes montre la performance la plus faible, probablement en raison de son hypothèse d'indépendance des features qui n'est pas respectée dans les textes de recettes. Les termes culinaires co-occurrent fréquemment (ex: "pâte" et "four" pour les desserts), ce qui pénalise ce modèle.
+Naive Bayes montre la performance la plus faible, probablement en raison de son hypothèse d'indépendance des features qui n'est pas respectée dans les textes de recettes. Les termes culinaires co-occurrent fréquemment (ex: "pâte" et "four" pour les desserts), ce qui pénalise fortement ce modèle.
 ##### TF-IDF
 La supériorité de TF-IDF s'explique par la nature très spécifique du vocabulaire culinaire. Les catégories de recettes se distinguent fortement par leurs ingrédients et techniques spécifiques, et TF-IDF excelle à capturer ces différences lexicales. Par exemple, les desserts contiennent presque systématiquement des termes comme "sucre", "chocolat" ou "pâte", tandis que les entrées mentionnent souvent "salade" ou "apéritif".
+Elle s'explique aussi par sa nature de discrimination des mots.
+TF-IDF est un ratio entre la fréquence absolue de chaque mot dans le corpus et la rareté (à quel point il apparait peu et pas dans tout les documents) de chaque mot, cela nous permet de trouver des discriminants, c'est à dire des mots qui nous permettent de trouver efficacement la classe du document (comme chocolat qui apparait seulement dans les desserts), cependant, TF-IDF ne permet pas de capturer les dépendances entre les mots (crème fouettée), ce qui fait qu'il a assez des limites.
 ##### CamemBERT
-CamemBERT offre une bonne performance car il comprend le contexte linguistique des recettes françaises. Cependant, sa sophistication est peut-être superflue pour cette tâche où la simple présence de certains mots-clés est suffisamment discriminante, ce qui explique pourquoi il est légèrement moins performant que TF-IDF.
+CamemBERT offre une bonne performance car il comprend le contexte linguistique des recettes françaises. Cependant, sa sophistication est peut-être superflue pour cette tâche où la simple présence de certains mots-clés est suffisamment discriminante, ce qui explique pourquoi il est légèrement moins performant que TF-IDF. Il est plus performant que Word2Vec car il vectorise les mots et capture le contexte via un embeddings contextuel, ce qu'il fait qu'il perçoie la différence entre orange (couleur) et orange (fruit).
 ##### Word2Vec
-Word2Vec est moins adapté car il tend à lisser les différences entre les termes en se concentrant sur les similarités sémantiques, alors que pour cette tâche, ce sont précisément les différences lexicales qui sont les plus informatives.
+Word2Vec est moins adapté car il tend à lisser les différences entre les termes en se concentrant sur les similarités sémantiques, alors que pour cette tâche, ce sont précisément les différences lexicales qui sont les plus informatives. Il est moins performant que BERT car il effectue un embedding statique ce qui fait qu'il ne capture pas le contexte des mots, pour lui, orange représente tout le temps un fruit par exemple, donc il va peut être mal classifier un document quand il verra "orange" car il sera probablement sous le contexte d'une couleur et non d'un fruit.
 
 
 #### Analyse du ROC
@@ -186,7 +189,7 @@ Word2Vec est moins adapté car il tend à lisser les différences entre les term
 
 ![Dessert](./figure/dessert_distrib.png "Dessert")
 
-On remarque ici que le modèle apparit presque certain lorsqu'il fait son choix de classe pour un Dessert. Cela se remarque à cause de l'importance des pics aux extrêma et à l'abscence de documents au centre. 
+On remarque ici que le modèle apparait presque certain lorsqu'il fait son choix de classe pour un Dessert. Cela se remarque à cause de l'importance des pics aux extrêma et à l'abscence de documents au centre. 
 
 Au contraire le modèle est bien moins certain pour les plats principaux et les entrées qui ont une plus grande population aux alentours de 0.5. 
 
