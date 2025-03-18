@@ -110,6 +110,7 @@ On remarque que SVC et Regression logistique se démarquent. La comparaison de l
 *Word2Vec*
 
 ![Camembert](./figure/newplot.png "Camembert")
+*Camembert*
 
 #### Régression Logistique
 
@@ -120,6 +121,7 @@ On remarque que SVC et Regression logistique se démarquent. La comparaison de l
 *Word2Vec*
 
 ![Camembert](./figure/newplot_4.png "Camembert")
+*Camembert*
 
 ### Les f1 Scores test
 
@@ -150,7 +152,7 @@ Voilà pourquoi nous choisissons **Régression logistique** comme classifieur.
 ![Régression Logistique](./figure/rl_bert_test.png "Régression Logistique")
 
 
-### Analyse de résultats
+### Analyse des résultats
 
 #### Analyse comparative des différents modèles et approches 
 
