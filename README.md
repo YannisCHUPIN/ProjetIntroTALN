@@ -152,7 +152,7 @@ Voilà pourquoi nous choisissons **Régression logistique** comme classifieur.
 ![Régression Logistique](./figure/rl_bert_test.png "Régression Logistique")
 
 
-### Analyse de résultats
+### Analyse des résultats
 
 #### Analyse comparative des différents modèles et approches 
 
