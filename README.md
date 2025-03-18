@@ -51,7 +51,7 @@ Afin d'analyser le contenu de ces recettes, nous avons **concaténé** le titre,
 
 Dans le set d'entrainement, on peut compter $5802$ Plats principaux $3762$ Desserts et $2909$ Entrées. Respectivements ils représentent $46,52\%$, $30,16\%$ et $23,32\%$ des effectifs totaux de l'ensemble d'entraînement. On remarque alors tout de suite que les *Plats principaux* sont surreprésentés, tandis que les *Entrées* sont sous représentées. Dans ce type de cironstances, on remarque assez vite que le risque pour le modèle est de répondre trop souvent *Plat principal* dans le but d'améliorer l'accuracy globale, au détriment du tax de vrai positifs pour les Entrées. 
 
-Le set de test quant à lui compte 644 Plats principaux, 407 Desserts et  2909 Entrées. Respectivements ils représentent $16,26\%$, $10,27\%$ et $73,45\%$ des effectifs totaux de l'ensemble de test. On remarque une encore plus grande surreprésentation de Entrées cette fois-ci. 
+Le set de test quant à lui compte 644 Plats principaux, 407 Desserts et  337 Entrées. Respectivements ils représentent $47.75\%$, $28,58\%$ et $23,67\%$ des effectifs totaux de l'ensemble de test. On remarque cette fois ci une topologie différente mais proche du set d'entrainement. 
 
 ## Méthodes proposées
 
@@ -196,7 +196,7 @@ Il est à noter, le grand pic vers 0 et l'abscence de pic vers 1 pour les entré
 
 ![Régression Logistique](./figure/rl_tf_test.png "Régression Logistique")
 
-Quelque soit l'approche choisie, on remarque une très bonne classification des desserts. Cepenant, les classificateurs dans le but d'obtenir une meilleure accuracy, semblent prédire plus souvent plat principal que entrée. Cela peut s'expliquer par la topologie du set dans lequel on trouve $47\%$ de plats pour $23\%$ d'entrées. Alors même que ce type de considération n'a pas d'importance lorsqu'on confronte le modèle au monde réel. En effet la topologie du set de test est diamétralement opposée avec plus de $70\%$ d'entrées, ce qui prouve que prédire plus souvent "plat principal" n'est pas une solution viable.
+Quelque soit l'approche choisie, on remarque une très bonne classification des desserts. Cepenant, les classificateurs dans le but d'obtenir une meilleure accuracy, semblent prédire plus souvent plat principal que entrée. Cela pourrait s'expliquer par les différences topologique du set de test. Cela est peut être aussi dû à la surreprésentation des plats dans le set. Soulignons aussi l'absence flagrante d'erreurs dans la classification de desserts. 
 
 
 ## Conclusion 
@@ -205,4 +205,4 @@ Pour conclure, la meilleure approche globale est la vectorisation des textes ave
 Les matrices de confusion nous indiquent que le modèle est excellent pour prédire les desserts, mais confonds les plats principal et les entrées entre elles, ce qui est logique car l'un est sur-representé et l'autre est sous-representé dans les jeux de données.
 Enfin, nous avons la certitude grâce à la courbe ROC que le modèle est capable de discriminer efficacement les trois catégories de recettes.
 
-Pour aller plus loin, nous recommendons donc l'utilisation de techniques de rééquilibrages de classes comme SMOTE ou la pondération (même si sensible à l'overfitting) afin d'améliorer la détection des entrées. Il serit aussi intéressant de réintégrer les attribut *prix* et *difficulté* en les encodant en one-hot, pour comprendre l'impact de ces features sur les prédictions des modèles. 
+Pour aller plus loin, nous recommendons donc l'utilisation de techniques de rééquilibrages de classes comme SMOTE ou la pondération (même si sensible à l'overfitting) afin d'améliorer la détection des entrées. Il serait aussi intéressant de réintégrer les attribut *prix* et *difficulté* en les encodant en one-hot, pour comprendre l'impact de ces features sur les prédictions des modèles. 
